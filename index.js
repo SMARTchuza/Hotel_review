@@ -5,7 +5,7 @@ const mongoose               = require("mongoose");
 const findOrCreate           = require('mongoose-findorcreate');
 const app                    = express();
 
-mongoose.connect("mongodb+srv://tanmay:tanmay@cluster0-byvwx.mongodb.net/hotel_management?retryWrites=true&w=majority",{useNewUrlParser:true ,useUnifiedTopology: true })
+mongoose.connect("mongodb+srv://username:password@cluster0-byvwx.mongodb.net/db_management?retryWrites=true&w=majority",{useNewUrlParser:true ,useUnifiedTopology: true })
     .then(()=>console.log('DB CONNECTED...'))
     .catch(err=> console.log(err));
 app.set('view engine','ejs');
