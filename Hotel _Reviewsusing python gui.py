@@ -41,8 +41,8 @@ from sklearn.metrics import confusion_matrix
 y_pred = model.predict(X_test)
 confusion_matrix(y_pred,y_test)
 
-client = pymongo.MongoClient("mongodb://tanmay:tanmay@cluster0-shard-00-00-byvwx.mongodb.net:27017,cluster0-shard-00-01-byvwx.mongodb.net:27017,cluster0-shard-00-02-byvwx.mongodb.net:27017/hotel_management?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority")
-db = client.get_database('hotel_management')
+client = pymongo.MongoClient("mongodb://username:password@cluster0-shard-00-00-byvwx.mongodb.net:27017,cluster0-shard-00-01-byvwx.mongodb.net:27017,cluster0-shard-00-02-byvwx.mongodb.net:27017/hotel_management?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority")
+db = client.get_database('db_management')
 review=db.reviews
 print(review.count_documents({}))
 examples=list(review.find())
